@@ -16,6 +16,7 @@ RUN apt-get update -yqq \
 			libmcrypt-dev \
             libbz2-dev \
             libcurl4-gnutls-dev \
+            libxml2-dev \
         " \
         && doNotUninstall=" \
 				libfreetype6 \
