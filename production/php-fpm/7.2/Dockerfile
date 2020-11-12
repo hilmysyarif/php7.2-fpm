@@ -23,7 +23,7 @@ RUN apt-get update -yqq \
 				libpng12-0 \
 				libpq5 \
         " \
-		&& apt-get install -y zip bzip2 wget tar less $buildDeps --no-install-recommends \
+		&& DEBIAN_FRONTEND=noninteractive apt-get install -y zip bzip2 wget tar less $buildDeps --no-install-recommends apt-utils \
         && rm -r /var/lib/apt/lists/* \
         \
 		&& docker-php-ext-install bcmath curl dom exif intl libxml mbstring mcrypt zip pdo_mysql opcache \
