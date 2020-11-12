@@ -14,6 +14,7 @@ RUN apt-get update -yqq \
 			libpng-dev  \
 			libfreetype6-dev  \
 			libmcrypt-dev \
+            libbz2-dev \
         " \
         && doNotUninstall=" \
 				libfreetype6 \
