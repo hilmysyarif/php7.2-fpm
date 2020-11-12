@@ -34,8 +34,6 @@ RUN apt-get update -yqq \
 				--with-jpeg-dir=/usr/lib  \
 				--with-freetype-dir=/usr/include/freetype2 &&  \
 				docker-php-ext-install gd \
-		&& pecl install memcached \
 		&& rm -rf /tmp/pear \
 		\
         && apt-mark manual $doNotUninstall \
-        && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $buildDeps
