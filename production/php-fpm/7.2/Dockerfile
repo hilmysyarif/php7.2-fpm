@@ -11,7 +11,7 @@ RUN apt-get update -yqq \
 			libz-dev  \
 			libpq-dev  \
 			libjpeg-dev  \
-			libpng12-dev  \
+			libpng-dev  \
 			libfreetype6-dev  \
 			libmcrypt-dev \
         " \
