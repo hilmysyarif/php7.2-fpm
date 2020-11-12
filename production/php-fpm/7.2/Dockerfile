@@ -26,7 +26,7 @@ RUN apt-get update -yqq \
 		&& DEBIAN_FRONTEND=noninteractive apt-get install -y zip bzip2 wget tar less $buildDeps --no-install-recommends apt-utils \
         && rm -r /var/lib/apt/lists/* \
         \
-		&& docker-php-ext-install bcmath curl dom exif intl libxml mbstring mcrypt zip pdo_mysql opcache \
+		&& docker-php-ext-install bcmath bz2 calendar ctype curl dba dom enchant exif fileinfo filter ftp gd gettext gmp hash iconv imap interbase intl json ldap mbstring mysqli oci8 odbc opcache pcntl pdo pdo_dblib pdo_firebird pdo_mysql pdo_oci pdo_odbc pdo_pgsql pdo_sqlite pgsql phar posix pspell readline recode reflection session shmop simplexml snmp soap sockets sodium spl standard sysvmsg sysvsem sysvshm tidy tokenizer wddx xml xmlreader xmlrpc xmlwriter xsl zend_test zip \
 		&& docker-php-ext-configure gd  \
 				--enable-gd-native-ttf  \
 				--with-jpeg-dir=/usr/lib  \
